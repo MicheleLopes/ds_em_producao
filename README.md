@@ -195,7 +195,7 @@ Com o Cross Validation, obtemos os seguintes resultados:
 |Linear Regression-Lasso| 2117.99 | +/- 342.74|  29%   | +/- 0.01 |3058.17 |+/- 506.07|
 
 Para uma melhor interpretação:
-AVG = Média
+AVG = Média, 
 STD = Desvio padrão
 
 ## 6.3. Escolha do Modelo
@@ -204,7 +204,7 @@ Embora o algoritmo Random Forest Regressor tenha sido o algoritmo que melhor per
 
 ## 6.4. Ajuste de Hiperparâmetros
 
-Com a escolha do algoritmo, seguimos para etapa de ajuste dos hiperparâmetros. Novamente pensando no ganho de velocidade, utilizamos a técnica de Random Search para a busca pelo os melhores hiperparâmetros. Após 5 iterações rodando com alguns parâmetros escolhidos aleatoriamente, chegamos aos seguintes parâmetros finais:
+Com a escolha do algoritmo, seguimos para etapa de ajuste dos hiperparâmetros. Novamente pensando no ganho de velocidade, utilizamos a técnica de Random Search para a busca pelo os melhores hiperparâmetros. Após 5 iterações rodando com alguns parâmetros escolhidos aleatoriamente, chegamos aos seguintes parâmetros e performance final:
 
 Os parâmetros finais para o algoritmo XGboost foram:
 
@@ -225,22 +225,61 @@ Tabela com a performance do modelo final:
 
 # 7. Tradução e interpretação do erro
 
+O modelo selecionado obteve uma performance aceitável, visto que conseguiu entender e reproduzir o padrão de vendas ao longo dos anos estudados com um erro médio absoluto de 10,64% (MAPE).
+Dessa forma, as duas próximas sessões irão traduzir esse erro e os resultados do algoritmo, um do ponto de vista de negócios e outro do ponto de vista técnico da ciência de dados.
+1354.80 | 45,50% | 1835.13
 ## 7.1 Business Performance
+
+Com os resultados do algoritmo, conseguimos realizar a previsão de vendas para as próximas 6 semanas, para cada loja individualmente e também a margem do erro, o que nos possibilita trazer além da previsão, o pior e melhor cenário e o % do erro das previsões, auxiliando na tomada de decisão com relação a qual cenário é mais assertivo o gerente considerar.
+Além disso, se levarmos em consideração que anteriormente era utilizado para previsão um modelo de média, conforme o erro no item 6.1 temos uma diferença na assertividade de R$ 631,52 o que representa uma melhoria de 47% (métrica MAE) e uma melhoria no percentual do erro absoluto médio de 35% (métrica MAPE).
+
+Abaixo temos uma tabela com as previsões individuais das 5 lojas com a melhor performance na predição e as 5 com a pior performance. Na sequência um gráfico com a distribuição das lojas e seu erro MAPE , onde é possível observar que a maioria das lojas tem seu erro em torno do valor de 10% e temos 2 lojas com o erro bem distante dessa média, com valores acima de 50%.
+
+| Loja |   Previsão   | Pior cenário |Melhor cenário| MAE       | MAPE  |Ranking MAPE|
+|------|--------------|--------------|--------------|-----------|-------|------------|
+| 259  | R$ 546.924,44| R$ 546.383,89|R$ 547.464,99 |R$ 540,55  | 4,34% | 1°         |
+| 1097 | R$ 466.624,53| R$ 466.152,15|R$ 467.096,91 |R$ 472,38  | 4,47% | 2°         |
+| 733  | R$ 633.979,87| R$ 633.298,73|R$ 634.661,02 |R$ 681,14  | 4,63% | 3°         |
+| 1089 | R$ 365.315,31| R$ 364.713,64|R$ 365.916,98 |R$ 601,67  | 5,42% | 4°         |
+| 676  | R$ 389.753,72| R$ 389.199,43|R$ 390.308,01 |R$ 554.29  | 5,54% | 5°         |
+| 292  | R$ 110.098,54| R$ 106.676,31|R$ 113.520,77 |R$ 3.422,23|62,52% | 1111°      |
+| 909  | R$ 227.353,34| R$ 219.495,42|R$ 235.211,27 |R$ 7.857,92|52,35% | 1112°      |
+| 876  | R$ 195.054,94| R$ 190.988,87|R$ 199.121,00 |R$ 4.066,06|32,64% | 1113°      |
+| 170  | R$ 190.106,06| R$ 189.042,98|R$ 191.169,14 |R$ 1.063,08|26,87% | 1114°      |
+| 970  | R$ 120.569,17| R$ 120.003,15|R$ 121.135,19 |R$ 566.02  |25,53% | 1115°      |
+
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/mapelojas.png)
+
+Para uma tomada de decisão mais macro, segue também o valor total das previsões:
+
+| Previsão       |  Pior cenário  | Melhor cenário |
+|----------------|----------------|----------------|
+|R$282.785.952,00| 281.975.478,53 |R$283.596.417,20| 
 
 ## 7.2 Machine Learning Performance
 
-8. Conclusões
+Para avaliar a performance com aos olhos do lado técnico, a principal métrica foi a RMSE. Além disso, conforme o gráfico abaixo, conseguimos comparar as vendas reais com a nossa previsão, onde de uma forma geral o modelo conseguiu reproduzir o padrão de vendas ao longo do tempo, o que confirma a qualidade do nosso modelo:
+
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/graficoml1.png)
+
+E ao olhar a distribuição dos erros nos 2 gráficos abaixo, podemos observar uma distribuição normal a cerca das previsões, o que nos inidica um bom resultado do modelo selecionado.
+
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/graficoml2.png)
+
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/graficoml3.png)
+
+# 8. Conclusões
 Conforme pôde ser verificado, o projeto resolveu o problema inicial, que era a previsão de faturamento das lojas feitas de forma manual por seus gerentes.
 
-Outro ponto importante de destacar é que com a solução criada, os gerentes podem agora consultar as lojas de forma automática utilizando o BOT criado, um ponte que consegue trazer de forma simples o produto criado pelo cientista de dados para uma pessoa da área de negócios, agregando valor e trazendo agilidade na tomada de decisão.
+Outro ponto importante de destacar é que com a solução criada, os gerentes podem agora consultar através do celular a previsão das lojas de forma automática com o BOT criado, um ponte que consegue trazer de forma simples o produto criado pelo cientista de dados para uma pessoa da área de negócios, agregando valor e agilidade na tomada de decisão.
 
-9. Lições Aprendidas
+# 9. Lições Aprendidas
 
 - Priorizar tarefas e soluções;
 - Desenvolver soluções de forma cíclica, entregando assim resultado mais rapidamente;
 - Construção de um BOT para o aplicativo de mensagens Telegram, afim de agilizar o acesso à informações.
 
-10. Próximos Passos
+# 10. Próximos Passos
 
 - Investigar a razão de algumas lojas estarem com previsões ruins e avaliar a possibilidade  modelos específicos para a previsão dessas lojas;
 - Selecionar outros algoritmos para treinamento no próximo ciclo, a fim de buscar uma solução que melhore o desempenho da previsão;
