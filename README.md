@@ -234,9 +234,9 @@ Para avaliar a performance com aos olhos do lado técnico, a principal métrica 
 
 E ao olhar a distribuição dos erros nos 2 gráficos abaixo, podemos observar uma distribuição normal a cerca das predições, o que nos inidica um bom resultado do modelo selecionado.
 
-![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/grafico2.png)
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/error.png)
 
-![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/grafico3.png)
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/error1.png)
 
 # 8. Conclusões
 Conforme pôde ser verificado, o projeto resolveu o problema inicial, que era a previsão de faturamento das lojas feitas de forma manual por seus gerentes.
