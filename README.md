@@ -1,7 +1,7 @@
 # 1- Problema de negócio
 A Rossmann é uma rede de farmácia que opera mais de 3.000 drogarias em 7 países europeus. Foi solicitado por partes dos gerentes de loja da Rossmann a predição de suas vendas diárias com até seis semanas de antecedência para poder tomar decisões estratégicas de futuros investimentos. As vendas das lojas são influênciadas por vários fatores, incluindo promoções, concorrentes, feriados escolares e do estado, localização, sazonalidade e sortimento de produtos.
 
-Para realizar essa predição, a empresa disponibilizou os dados dentro da plataforma de competições de dados [Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales/overview). Foram disponibilizados 1.017.209 registros das vendas realizadas de 1.115 filias da empresa, contendo 18 características únicas para cada venda realizada.
+Para realizar essa predição, a empresa disponibilizou os dados dentro da plataforma de competições de dados [Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales/overview). Foram disponibilizados 1.017.209 registros das vendas realizadas de 1.115 filiais da empresa, contendo 18 características únicas para cada venda realizada.
 
 # 2- Premissas do negócio
 Para a construção da solução, assumimos as seguintes premissas:
