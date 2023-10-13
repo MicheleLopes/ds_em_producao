@@ -230,13 +230,13 @@ Para uma tomada de decisão mais macro, segue também o valor total das prediç�
 ## 7.2 Machine Learning Performance
 Para avaliar a performance com aos olhos do lado técnico, a principal métrica foi a RMSE. Além disso, conforme o gráfico abaixo, conseguimos comparar as vendas reais com a nossa predição, onde de uma forma geral o modelo conseguiu reproduzir o padrão de vendas ao longo do tempo, o que confirma a qualidade do nosso modelo:
 
-![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/graficoml1.png)
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/grafico1.png)
 
 E ao olhar a distribuição dos erros nos 2 gráficos abaixo, podemos observar uma distribuição normal a cerca das predições, o que nos inidica um bom resultado do modelo selecionado.
 
-![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/graficoml2.png)
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/grafico2.png)
 
-![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/graficoml3.png)
+![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/grafico3.png)
 
 # 8. Conclusões
 Conforme pôde ser verificado, o projeto resolveu o problema inicial, que era a previsão de faturamento das lojas feitas de forma manual por seus gerentes.
