@@ -5,9 +5,12 @@ Para realizar essa predição, a empresa disponibilizou os dados dentro da plata
 
 # 2- Premissas do negócio
 Para a construção da solução, assumimos as seguintes premissas:
-1.Realizar a previsão apenas das lojas que possuam o valor de vendas superior a 0 na base de dados;
-2.Os dias em que as lojas estavam fechadas devem ser descartados da previsão.;
-3.Lojas que não possuíam dados de competidores próximos, o valor da distância será fixada em 200.000 metros.
+
+1.Realizar a previsão apenas de lojas que possuam o valor de vendas superior a 0 na base de dados;
+
+2.Os dias em que a informação na base de dados indica que a loja estava fechada, serão descartados da previsão;
+
+3.Lojas que não possuírem dados de competidores próximos, o valor da distância na coluna 'CompetitionDistance' será fixado em 200.000 metros.
 
 ## 2.1- Descrição dos dados
 | Atributo            | Descrição                             |
