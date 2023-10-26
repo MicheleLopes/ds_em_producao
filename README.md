@@ -34,7 +34,7 @@ Para a construção da solução, assumimos as seguintes premissas:
 # 3- Estratégia da solução
 Com o objetivo de entregar valor da maneira mais rápida possível e ajudar os gerentes na tomada de decisão, foi utilizado o método de gerenciamento cíclico CRISP-DS
 
-Ele consiste em 9 passos ciclicos, onde a cada iteração dos nove passos, o resultado de negócio é aperfeiçoado, visando entregas cada vez mais rápidas e com mais qualidade e acertividade, possibilitando assim que as equipes que irão utilizar os resultados desenvolvidos tenham um produto um produto minimamente utilizável na primeira entrega e que é aperfeiçoado ao longo do tempo.
+Ele consiste em 9 passos ciclicos, onde a cada iteração dos nove passos, o resultado de negócio é aperfeiçoado, visando entregas cada vez mais rápidas e com mais qualidade e acertividade, possibilitando assim que as equipes que irão utilizar os resultados desenvolvidos tenham um produto minimamente utilizável na primeira entrega e que é aperfeiçoado ao longo do tempo.
 ## 3.1- Passos do CRISP-DS:
 1-**Problema de Negócio:** É nesta etapa que recebemos o problema de negócio, ou seja uma solicitação feita por alguma área ou alguém em específico;
 
@@ -68,9 +68,9 @@ Para criar a solução, foram utilizadas as seguintes ferramentas:
 - Algoritmos de Machine Learning da biblioteca scikit-learn da linguagem de programação Python.
 
 # 4- Top 3 insights de dados
-A primeira etapa da análise exploratória de dados, foi realizar a construção de hipóteses para validação. Para isto, foi realizado um brainstorming e utilizado um Mindmap para ajudar nessa contruções, conforme imagem abaixo
+A primeira etapa da análise exploratória de dados, foi realizar a construção de hipóteses para validação. Para isto, foi realizado um brainstorming e utilizado um Mindmap para ajudar nessa contrução, conforme imagem abaixo:
 ![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/daily_store_sales.png)
-Através do Mindmap, foram geradas 19 hipóteses de negócio, dentre estas 11 foram escolhidas para validação e assim, foi possível confirmar as premissas da equipe de negócios, e gerar insights para ambos.
+Através do Mindmap, foram geradas 19 hipóteses de negócio, onde 11 foram escolhidas para validação nesta etapa, o que tornou possível confirmar as premissas da equipe de negócios, e gerar insights para ambos.
 
 Com as 11 hipóteses verificadas, os 3 principais insights gerados foram:
 
@@ -107,8 +107,8 @@ Conforme o gráfico, A média de vendas no segundo semestre é maior, mas o aume
 ## 5.1 Preparação dos dados
 O aprendizado de máquina dos algoritmos de Machine Learning é facilitado com dados númericos e na mesma escala. Por conta disso, antes da etapa de aplicação dos algoritmos foram realizadas algumas transformações nos dados.
 ### 5.1.1 Re-escala
-Ao analisar nossas variáveis numéricas na análise exploratória de dados, nenhuma possuia uma distribuição normal, que se caracteriza por uma distribuição de probabilidade contínua, onde sua distribuição é simétrica em torno de sua média. Dessa forma foram aplicados os métodos de re-escala min-max e robust Scaler.
-Para escolha do melhor método foram analisadas as variáveis individualmente através de gráficos de caixa (boxplot) e, para as que foi identificado que a presença de outliers era muito forte, foi escolhido a Robust Scaler. Com base nesse critério, os métodos de aplicação de re-escala ficaram conforme a tabela abaixo:
+Ao analisar nossas variáveis numéricas na análise exploratória de dados, observamos que nenhuma possuia uma distribuição normal, ou seja, com caracteristica de uma distribuição de probabilidade contínua, onde sua distribuição é simétrica em torno de sua média. Dessa forma foram aplicados os métodos de re-escala min-max e robust Scaler.
+Para escolha do melhor método foram analisadas as variáveis individualmente através de gráficos de caixa (boxplot), onde as que identificamos que a presença de outliers era muito forte, foi escolhido a Robust Scaler. Com base nesse critério, os métodos de aplicação de re-escala ficaram conforme a tabela abaixo:
 
 Tabela com as variáveis numéricas e cada resscala feita
 |  Variável         |  Tipo da variável  | Método      |
