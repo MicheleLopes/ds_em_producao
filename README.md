@@ -92,7 +92,7 @@ Ao realizar a análise, tanto do valor de média geral, como a média ao longo d
 A hipotése é confirmada quando analisamos a média de vendas conforme o gráfico abaixo. Além disso, podemos identificar que a média de vendas também é bastante alta nos feriados de páscoa, o que sugere um comportamento de aumento de demanda em grandes feriados.
 ![](https://github.com/MicheleLopes/ds_em_producao/blob/main/img/insight2.png)
 
-## **Insight 3- Lojas com promoções consecutivas deveriam vender mais**
+## **Insight 3- Lojas com vendem mais no segundo semestre**
 **Hipótese verdadeira.**
 Conforme o gráfico, A média de vendas no segundo semestre é maior, mas o aumento no segundo semestre ocorre principalmente por conta do mês de dezembro.
 
